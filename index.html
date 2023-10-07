@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdul-Ahad</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <a href=""><img src="./img/logo.png" class="logo" alt="" /></a>
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <ul class="navigation">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">What's New</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textbox">
+          <h2>Taste the Feeling</h2>
+          <p>
+            Coca-Cola, or Coke, is a carbonated soft drink manufactured by the
+            Coca-Cola Company. In 2013, Coke products were sold in over 200
+            countries worldwide, with consumers drinking more than 1.8 billion
+            company beverage servings each day.[1] Coca-Cola ranked No. 87 in
+            the 2018 Fortune 500 list of the largest United States corporations
+            by total revenue.[2] Based on Interbrand's "best global brand" study
+            of 2020, Coca-Cola was the world's sixth most valuable brand.
+          </p>
+          <a href="">Learn more</a>
+        </div>
+        <div class="imgbox">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="./img/cocacola1.png" /></div>
+              <div class="swiper-slide"><img src="./img/cocacola2.png" /></div>
+              <div class="swiper-slide"><img src="./img/cocacola3.png" /></div>
+              <div class="swiper-slide"><img src="./img/cocacola4.png" /></div>
+              <div class="swiper-slide"><img src="./img/cocacola5.png" /></div>
+              <div class="swiper-slide"><img src="./img/cocacola6.png" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="sci">
+        <li>
+          <a href="https://www.facebook.com/CokePakistan/"
+            ><img src="./img/facebook.png" alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/CocaCola"
+            ><img src="./img/twitter.png" alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/cocacolapk/?hl=en"
+            ><img src="./img/instagram.png" alt=""
+          /></a>
+        </li>
+      </ul>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="Footer">
+        <h2>Abdul Ahad</h2>
+        <h5>Professional Front-end Devoloper..</h5>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 200,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        loop: true,
+      });
+      function toggleMenu() {
+        const menuToggle = document.querySelector(".toggle");
+        const navigation = document.querySelector(".navigation");
+        menuToggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
